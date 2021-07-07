@@ -37,7 +37,6 @@ npcely = 5 5 5 5
 npcelz = 5 5 5 5  
 
 
-
 # uth = thermal velocity for different species - Direction X  */
 uth  = 0.045 0.0126 0.045 0.0126
 # vth = thermal velocity for different species - Direction Y */

@@ -67,12 +67,17 @@ inline void initGEM(struct parameters* param, struct grid* grd, struct EMfield* 
                 field->Bzn[i][j][k] = param->B0z;
                 
             }
+    
+    std::cout << " FINISHED FIELD AND DENSITY " << std::endl;
+
     // calculate B and rho at centers cells: first argument is on center cell
     interpN2Cfield(field_aux->Bxc, field_aux->Byc, field_aux->Bzc, field->Bxn, field->Byn, field->Bzn, grd);
     // interpolate densities species from node
     for (int is=0; is < param->ns; is++){
         interpN2Crho(&ids[is], grd);
     }
+
+    std::cout << " FINISHED interpN2Cfield & interpN2Crho " << std::endl;
     
     /////////////////////////////////////////////////
     //////   PARTICLE
